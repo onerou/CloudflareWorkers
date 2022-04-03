@@ -11,7 +11,7 @@ try {
     sourcemap: true,
     format: "esm",
     target: "esnext",
-    entryPoints: [path.join(__dirname, "src", "index.ts")],
+    entryPoints: [path.join(__dirname, "src", "index.tsx")],
     outdir: path.join(__dirname, "dist"),
     outExtension: { ".js": ".mjs" }
   });
