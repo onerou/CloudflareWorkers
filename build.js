@@ -1,19 +1,16 @@
-import path from "path";
-import { fileURLToPath } from "url";
-import { build } from "esbuild";
+const path = require("path");
+const { build } = require("esbuild");
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 try {
-  await build({
+  build({
     bundle: true,
     sourcemap: true,
     format: "esm",
     target: "esnext",
-    entryPoints: [path.join(__dirname, "src", "index.ts")],
+    entryPoints: [path.join(__dirname, "src", "index.jsx")],
     outdir: path.join(__dirname, "dist"),
-    outExtension: { ".js": ".mjs" },
+    outExtension: { ".js": ".mjs" }
   });
 } catch {
   process.exitCode = 1;
