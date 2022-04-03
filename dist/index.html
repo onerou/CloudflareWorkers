@@ -41,7 +41,7 @@
   </body>
   <script>
     if ("serviceWorker" in navigator) {
-      window.addEventListener("flutter-first-frame", function () {
+      window.addEventListener("load", function () {
         navigator.serviceWorker.register("/sw.js").then(
           function (registration) {
             console.log(
