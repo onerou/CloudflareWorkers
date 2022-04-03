@@ -5,7 +5,7 @@ import axios from 'axios';
 function App() {
   axios.get('https://flat-heart-db88.1057674027.workers.dev/api/get')
     .then(res => {
-      console.log(res.data);
+      console.log(res.data,123);
     });
   return (
     <div className="App">
