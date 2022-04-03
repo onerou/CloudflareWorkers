@@ -1,5 +1,5 @@
-import { registerRoute } from "workbox-routing";
-import { StaleWhileRevalidate } from "workbox-strategies";
+// import { registerRoute } from "workbox-routing";
+// import { StaleWhileRevalidate } from "workbox-strategies";
 
 // registerRoute(
 //   ({ request }) =>
