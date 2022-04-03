@@ -1,7 +1,12 @@
 import React from 'react';
 import './App.css';
+import axios from 'axios';
 
 function App() {
+  axios.get('https://flat-heart-db88.1057674027.workers.dev/api/get')
+    .then(res => {
+      console.log(res.data);
+    });
   return (
     <div className="App">
       <header className="App-header">
