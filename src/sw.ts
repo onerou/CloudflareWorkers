@@ -13,7 +13,7 @@ import { ExpirationPlugin } from "workbox-expiration";
 // Cache page navigations (html) with a Network First strategy
 registerRoute(
   // Check to see if the request is a navigation to a new page
-  ({ request }) => request.mode === "navigate",
+  ({ url }) => url.pathname.startsWith("/api/"),
   // Use a Network First caching strategy
   new NetworkFirst({
     // Put all cached files in a cache named 'pages'
